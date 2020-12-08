@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
+import Sidebar from "./screens/Sidebar";
 
 function App() {
   return (
     <div className="app">
-      <h1>this is Waffle</h1>
+      <Sidebar />
     </div>
   );
 }
