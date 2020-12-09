@@ -1,5 +1,5 @@
 import React from "react";
-import * as firebase from "firebase/app";
+import firebase from "firebase";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -14,5 +14,13 @@ export const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export { auth, provider };
+
+export default db;

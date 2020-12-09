@@ -5,3 +5,37 @@
   background-color: #363a3f;
   height: 100vh;
 }
+
+.waffle__messages {
+  flex: 1;
+}
+
+.waffle__input {
+  color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px;
+  border-top: 1px solid gray;
+  background-color: #474b53;
+}
+
+.waffle__input > form > input {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline-width: 0;
+  color: whitesmoke;
+  font-size: large;
+  width: 100%;
+}
+
+.waffle__input > form {
+  flex: 1;
+}
+
+.waffle__input-btn {
+  display: none;
+}
