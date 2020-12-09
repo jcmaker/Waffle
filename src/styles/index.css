@@ -1,6 +1,12 @@
+/* Components */
 @import "App.css";
-
 @import "sidebar.css";
+@import "waffle.css";
+
+/* Screens */
+@import "sidebarChannel.css";
+@import "waffleHeader.css";
+
 * {
   margin: 0;
 }

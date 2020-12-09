@@ -1,0 +1,36 @@
+.waffle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 8px;
+}
+
+.header__hash {
+  color: gray;
+  font-size: 25px;
+  padding: 8px;
+}
+
+.waffleHeader-left > h3 {
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.waffleHeader-right {
+  display: flex;
+  align-items: center;
+  flex: 0.5;
+  margin: 0px 5px;
+  justify-content: flex-end;
+}
+
+.waffleHeader-right > .MuiSvgIcon-root {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.waffleHeader-right > .MuiSvgIcon-root:hover {
+  color: whitesmoke;
+}
