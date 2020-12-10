@@ -60,7 +60,10 @@
   color: white;
 }
 
-.sidebar__profile > .MuiSvgIcon-root {
+.MuiSvgIcon-root {
   padding: 5px;
   cursor: pointer;
+}
+.MuiSvgIcon-root:hover {
+  color: whitesmoke;
 }
