@@ -36,14 +36,17 @@ const Sidebar = () => {
     <>
       <div className="sidebar">
         <div className="sidebar__top">
-          <h3>Waffle</h3>
+          <h3>
+            Waffle <img src="image/waffle_small_logo.png" alt="" />
+          </h3>
+
           <ExpandMoreIcon />
         </div>
         <div className="sidebar__channels">
           <div className="sidebar__channels-header">
             <div className="sidebar__header">
               <ExpandMoreIcon />
-              <h4>text channels</h4>
+              <h4>Waffle channels</h4>
             </div>
             <AddIcon
               className="sidebar__addChannel"

@@ -3,6 +3,12 @@
 }
 
 .sidebarChannel:hover > h4 {
+  color: whitesmoke;
+  background-color: #40464b;
+  border-radius: 4px;
+}
+
+.sidebarChannel > h4 {
   color: gray;
   background-color: #2f3135;
   padding-left: 10px;
@@ -13,6 +19,7 @@
 
 .sidebarChannel__hash {
   margin-left: 5px;
+  margin-right: 5px;
   font-size: 25px;
   padding: 2px;
 }
