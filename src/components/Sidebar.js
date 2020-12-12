@@ -48,10 +48,12 @@ const Sidebar = () => {
               <ExpandMoreIcon />
               <h4>Waffle channels</h4>
             </div>
-            <AddIcon
-              className="sidebar__addChannel"
-              onClick={handleAddChannel}
-            />
+            <p title="Add Channel">
+              <AddIcon
+                className="sidebar__addChannel"
+                onClick={handleAddChannel}
+              />
+            </p>
           </div>
           <div className="sidebar__channels-list">
             {channels.map(({ id, channel }) => (
@@ -71,7 +73,7 @@ const Sidebar = () => {
           </div>
           <div className="sidebar_profileIcon">
             <SettingsIcon />
-            <a href="/">
+            <a href="/" title="Logout">
               <MeetingRoomIcon onClick={() => auth.signOut()} />
             </a>
           </div>

@@ -37,7 +37,9 @@ function App() {
           <Waffle />
         </>
       ) : (
-        <Login />
+        <>
+          <Login />
+        </>
       )}
     </div>
   );
