@@ -33,41 +33,48 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="sidebar">
-      <div className="sidebar__top">
-        <h3>Waffle</h3>
-        <ExpandMoreIcon />
-      </div>
-      <div className="sidebar__channels">
-        <div className="sidebar__channels-header">
-          <div className="sidebar__header">
-            <ExpandMoreIcon />
-            <h4>text channels</h4>
-          </div>
-          <AddIcon className="sidebar__addChannel" onClick={handleAddChannel} />
+    <>
+      <div className="sidebar">
+        <div className="sidebar__top">
+          <h3>Waffle</h3>
+          <ExpandMoreIcon />
         </div>
-        <div className="sidebar__channels-list">
-          {channels.map(({ id, channel }) => (
-            <SidebarChannel
-              key={id}
-              id={id}
-              channelName={channel.channelName}
+        <div className="sidebar__channels">
+          <div className="sidebar__channels-header">
+            <div className="sidebar__header">
+              <ExpandMoreIcon />
+              <h4>text channels</h4>
+            </div>
+            <AddIcon
+              className="sidebar__addChannel"
+              onClick={handleAddChannel}
             />
-          ))}
+          </div>
+          <div className="sidebar__channels-list">
+            {channels.map(({ id, channel }) => (
+              <SidebarChannel
+                key={id}
+                id={id}
+                channelName={channel.channelName}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="sidebar__profile">
+          <Avatar src={user.photo} />
+          <div className="sidebar__profileInfo">
+            <h3>{user.displayName}</h3>
+            <p>#{user.uid.substring(0, 6)}</p>
+          </div>
+          <div className="sidebar_profileIcon">
+            <SettingsIcon />
+            <a href="/">
+              <MeetingRoomIcon onClick={() => auth.signOut()} />
+            </a>
+          </div>
         </div>
       </div>
-      <div className="sidebar__profile">
-        <Avatar src={user.photo} />
-        <div className="sidebar__profileInfo">
-          <h3>{user.displayName}</h3>
-          <p>#{user.uid.substring(0, 6)}</p>
-        </div>
-        <div className="sidebar_profileIcon">
-          <SettingsIcon />
-          <MeetingRoomIcon onClick={() => auth.signOut()} />
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
