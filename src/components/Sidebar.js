@@ -24,6 +24,8 @@ const Sidebar = () => {
     });
   }, []);
 
+  const sidebaropen = document.querySelector(".sidebar");
+  const sidebarclose = document.querySelector(".sidebar-menu");
   const handleAddChannel = () => {
     const channelName = prompt("Enter a new Channel Name");
     if (channelName) {
@@ -36,11 +38,16 @@ const Sidebar = () => {
     <>
       <div className="sidebar">
         <div className="sidebar__top">
+          <ExpandMoreIcon
+            className="sidebar-menu"
+            onClick={() => {
+              sidebaropen.classList.toggle("open");
+              sidebarclose.classList.toggle("rotate");
+            }}
+          />
           <h3>
             Waffle <img src="image/waffle_small_logo.png" alt="" />
           </h3>
-
-          <ExpandMoreIcon />
         </div>
         <div className="sidebar__channels">
           <div className="sidebar__channels-header">

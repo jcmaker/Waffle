@@ -13,3 +13,7 @@
   margin-left: 20px;
   font-size: x-small;
 }
+
+.message > .MuiSvgIcon-root {
+  z-index: 0;
+}

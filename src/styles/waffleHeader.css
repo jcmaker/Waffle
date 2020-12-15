@@ -12,6 +12,11 @@
   padding: 8px;
 }
 
+.waffle-header > .MuiSvgIcon-root {
+  background-color: #363a3f;
+  color: #363a3f;
+}
+
 .waffleHeader-left > h3 {
   display: flex;
   align-items: center;

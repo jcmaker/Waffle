@@ -31,3 +31,10 @@
   background-color: black;
   color: #c100f8;
 }
+
+@media screen and (max-width: 530px) {
+  .login__logo {
+    display: flex;
+    flex-direction: column;
+  }
+}
