@@ -8,6 +8,9 @@ import MeetingRoomIcon from "@material-ui/icons/MeetingRoom";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import db, { auth } from "../fbManager";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import EmailIcon from "@material-ui/icons/Email";
 
 const Sidebar = () => {
   const user = useSelector(selectUser);
@@ -38,6 +41,9 @@ const Sidebar = () => {
     <>
       <div className="sidebar">
         <div className="sidebar__top">
+          <h3>
+            Waffle <img src="image/waffle_small_logo.png" alt="" />
+          </h3>
           <ExpandMoreIcon
             className="sidebar-menu"
             onClick={() => {
@@ -45,9 +51,6 @@ const Sidebar = () => {
               sidebarclose.classList.toggle("rotate");
             }}
           />
-          <h3>
-            Waffle <img src="image/waffle_small_logo.png" alt="" />
-          </h3>
         </div>
         <div className="sidebar__channels">
           <div className="sidebar__channels-header">
@@ -83,6 +86,28 @@ const Sidebar = () => {
             <a href="/" title="Logout">
               <MeetingRoomIcon onClick={() => auth.signOut()} />
             </a>
+          </div>
+        </div>
+        <div className="sidebar__footer">
+          <h5>&copy;Waffle</h5>
+          <div className="footer__icons">
+            <a
+              href="https://www.facebook.com/justin.cho.98622"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href="https://www.instagram.com/jcmaker0627/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InstagramIcon />
+            </a>
+            <span title="jcmaker0627@gmail.com">
+              <EmailIcon />
+            </span>
           </div>
         </div>
       </div>

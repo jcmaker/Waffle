@@ -58,7 +58,8 @@
   align-items: center;
 }
 
-.sidebar__profile {
+.sidebar__profile,
+.sidebar__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,6 +99,11 @@ a:hover {
     clip-path: circle(90px at 0% -2.9%);
     -webkit-clip-path: circle(90px at 0% -2.9%);
     transition: all 1s ease-in-out;
+  }
+
+  .sidebar__top {
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   .sidebar.open {

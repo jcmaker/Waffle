@@ -58,4 +58,19 @@
     height: 100vh;
     flex: 2;
   }
+  .waffle__input > form {
+    display: flex;
+    flex-direction: row;
+  }
+  .waffle__input-btn {
+    display: inline;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #c100f8;
+    color: #c100f8;
+  }
+  .waffle__input-btn > .MuiSvgIcon-root:hover {
+    color: black;
+  }
 }

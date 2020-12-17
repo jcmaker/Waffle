@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import Sidebar from "./Sidebar";
-import Waffle from "./Waffle";
 import { useSelector, useDispatch } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import Login from "./Login";
 import { auth } from "../fbManager";
 import { login, logout } from "../features/userSlice";
+import WafflePage from "./WafflePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,9 +31,7 @@ function App() {
     <div className="app">
       {user ? (
         <>
-          <Sidebar />
-
-          <Waffle />
+          <WafflePage />
         </>
       ) : (
         <>

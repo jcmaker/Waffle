@@ -29,13 +29,14 @@
   flex: 0.5;
   margin: 0px 5px;
   justify-content: flex-end;
+  padding: 8px;
 }
 
-.waffleHeader-right > .MuiSvgIcon-root {
+/* .waffleHeader-right > .MuiSvgIcon-root {
   padding: 2px;
   cursor: pointer;
 }
 
 .waffleHeader-right > .MuiSvgIcon-root:hover {
   color: whitesmoke;
-}
+} */
