@@ -37,6 +37,7 @@ const Sidebar = () => {
       });
     }
   };
+
   return (
     <>
       <div className="sidebar">
@@ -105,7 +106,19 @@ const Sidebar = () => {
             >
               <InstagramIcon />
             </a>
-            <span title="jcmaker0627@gmail.com">
+            <span
+              title="jcmaker0627@gmail.com"
+              className="email-span"
+              onClick={() => {
+                const textArea = document.createElement("textarea");
+                textArea.value = "jcmaker0627@gmail.com";
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand("Copy");
+                textArea.remove();
+                alert("My Email is Copied to Clipboard! Crtl + V 💌");
+              }}
+            >
               <EmailIcon />
             </span>
           </div>
