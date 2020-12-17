@@ -66,7 +66,13 @@ const Sidebar = () => {
               />
             </p>
           </div>
-          <div className="sidebar__channels-list">
+          <div
+            className="sidebar__channels-list"
+            onClick={() => {
+              sidebaropen.classList.toggle("open");
+              sidebarclose.classList.toggle("rotate");
+            }}
+          >
             {channels.map(({ id, channel }) => (
               <SidebarChannel
                 key={id}
@@ -84,9 +90,13 @@ const Sidebar = () => {
           </div>
           <div className="sidebar_profileIcon">
             <SettingsIcon />
-            <a href="/" title="Logout">
-              <MeetingRoomIcon onClick={() => auth.signOut()} />
-            </a>
+            <MeetingRoomIcon
+              title="logout"
+              onClick={() => {
+                auth.signOut();
+                window.location.reload();
+              }}
+            />
           </div>
         </div>
         <div className="sidebar__footer">

@@ -63,10 +63,11 @@
     flex-direction: row;
   }
   .waffle__input-btn {
-    display: inline;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: 60px;
     border: 1px solid #c100f8;
     color: #c100f8;
   }

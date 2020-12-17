@@ -16,9 +16,12 @@ const WaffleHeader = ({ channelName }) => {
         </h3>
       </div>
       <div className="waffleHeader-right">
-        <a href="/" title="Logout">
-          <MeetingRoomIcon onClick={() => auth.signOut()} />
-        </a>
+        <MeetingRoomIcon
+          onClick={() => {
+            auth.signOut();
+            window.location.reload();
+          }}
+        />
         <PersonIcon />
         <SettingsIcon />
       </div>

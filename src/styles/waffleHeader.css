@@ -32,11 +32,12 @@
   padding: 8px;
 }
 
-/* .waffleHeader-right > .MuiSvgIcon-root {
+.waffleHeader-right > .MuiSvgIcon-root {
   padding: 2px;
   cursor: pointer;
+  margin: 0px 2px;
 }
 
 .waffleHeader-right > .MuiSvgIcon-root:hover {
   color: whitesmoke;
-} */
+}
